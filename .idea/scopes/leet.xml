@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="leet" pattern="src:com.akira.leetcodepractice.problems.*" />
+</component>
