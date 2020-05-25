@@ -4,6 +4,10 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 题目：LeetCode 640 求解方程
+ * 本次解法：拆分方程
+ */
 public class Equation {
     public static void main(String[] args) {
         String equation = "x+5-3+x=6+x-2";

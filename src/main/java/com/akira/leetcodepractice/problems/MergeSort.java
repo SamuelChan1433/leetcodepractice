@@ -2,6 +2,9 @@ package com.akira.leetcodepractice.problems;
 
 import java.util.Arrays;
 
+/**
+ * 归并排序
+ */
 public class MergeSort {
     public static void sort(int [] nums) {
         mergeSort(nums, 0, nums.length -1);
