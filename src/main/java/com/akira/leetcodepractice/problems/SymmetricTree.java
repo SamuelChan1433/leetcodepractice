@@ -1,5 +1,7 @@
 package com.akira.leetcodepractice.problems;
 
+import com.akira.leetcodepractice.tools.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -10,8 +12,7 @@ import java.util.Queue;
  */
 public class SymmetricTree {
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(3);
-        root.initTree();
+        TreeNode root = TreeNode.initTree(new Integer[] {1,2,3,4,5});
 
         System.out.println("result is: " + isSymmetric(root));
     }
@@ -47,64 +48,5 @@ public class SymmetricTree {
         }
 
         return true;
-    }
-}
-
-
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-
- class TreeNode {
-     int val;
-     TreeNode left;
-     TreeNode right;
-     TreeNode(int x) { val = x; }
-
-    void initTree() {
-         TreeNode currentNode = this;
-         currentNode.left = new TreeNode(2);
-         currentNode.right = new TreeNode(2);
-
-         currentNode = this.left;
-         currentNode.left = null;
-         currentNode.right = new TreeNode(3);
-
-         currentNode = this.right;
-         currentNode.left=null;
-         currentNode.right = new TreeNode(3);
-    }
-
-
-    void initTree2() {
-        TreeNode currentNode = this;
-        currentNode.left = new TreeNode(3);
-        currentNode.right = new TreeNode(3);
-
-        currentNode = this.left;
-        currentNode.left = new TreeNode(4);
-        currentNode.right = new TreeNode(5);
-
-        currentNode = this.right;
-        currentNode.left = new TreeNode(5);
-        currentNode.right = new TreeNode(4);
-
-        currentNode = this.left.left;
-        currentNode.left = null;
-        currentNode.right = null;
-
-        currentNode = this.left.right;
-        currentNode.left = new TreeNode(8);
-        currentNode.right = new TreeNode(9);
-
-        currentNode = this.right.left;
-        currentNode.left = new TreeNode(9);
-        currentNode.right = new TreeNode(8);
     }
 }
