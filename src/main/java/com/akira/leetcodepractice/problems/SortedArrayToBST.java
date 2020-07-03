@@ -17,19 +17,7 @@ public class SortedArrayToBST {
         }
 
         int size = nums.length;
-        TreeNode root = new TreeNode(nums[size/2]);
-        TreeNode left = toBST(nums, 0, size/2 - 1);
-        TreeNode right = toBST(nums, size/2 + 1, size-1);
-
-        if (left != null) {
-            root.left = left;
-        }
-
-        if (right != null) {
-            root.right = right;
-        }
-
-        return root;
+        return toBST(nums, 0, size-1);
     }
 
     private TreeNode toBST(int[] nums, int start, int end) {
